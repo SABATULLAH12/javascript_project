@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+#hey{
+width:100%;
+height:50px;
+padding:10px 0px 10px 550px;
+background:grey;
+color:magenta;
+border:1px solid grey;
+position:fixed;}
+body{
+margin:0px;
+padding:0px;
+background-color:#cccccc;}
+table .but{
+width:60px;
+height:60px;
+position:relative;}
+</style>
+<script>
+function func(n)
+{
+if(n=="Clear")
+{
+calc.text1.value="";
+}
+else
+{
+if(n=="=")
+{
+calc.text1.value=eval(calc.text1.value);
+}
+else
+{ 
+var a=calc.text1.value; 
+a=a+n;
+calc.text1.value=a;
+}
+}
+ }
+</script>
+</head>
+<body>
+<div id="hey">
+<h1 style="margin:0px;">My Calculator</h1>
+</div>
+<div id="yeh" style="top:120px;left:40%;position:relative;">
+<form name="calc">
+<table style="border:1px solid black;width:260px;position:fixed;">
+<tr><td>
+<input name="btn"  value="Clear" type="button" onclick="func(btn.value)" />
+<input type="text" name="text1" style="width:100%;height:40px:position:relative;"/></td></tr>
+<tr><td>
+<input name="btn1" class="but" value="1" type="button" onclick="func(btn1.value)" />
+<input name="btn2" class="but" value="2" type="button" onclick="func(btn2.value)" />
+<input name="btn3" class="but" value="3" type="button" onclick="func(btn3.value)" />
+<input name="btn4" class="but" value="+" type="button" onclick="func(btn4.value)" /></td></tr>
+<tr><td>
+<input name="btn5" class="but" value="4" type="button" onclick="func(btn5.value)" />
+<input name="btn6" class="but" value="5" type="button" onclick="func(btn6.value)" />
+<input name="btn7" class="but" value="6" type="button" onclick="func(btn7.value)" />
+<input name="btn8" class="but" value="-" type="button" onclick="func(btn8.value)" />
+</td></tr>
+<tr><td>
+<input name="btn9" class="but"  value="7" type="button" onclick="func(btn9.value)" />
+<input name="btn10" class="but" value="8" type="button" onclick="func(btn10.value)" />
+<input name="btn11" class="but" value="9" type="button" onclick="func(btn11.value)" />
+<input name="btn12" class="but" value="*" type="button" onclick="func(btn12.value)" /></td></tr>
+<tr><td>
+<input name="btn13" class="but" value="." type="button" onclick="func(btn13.value)" />
+<input name="btn14" class="but" value="0" type="button" onclick="func(btn14.value)" />
+<input name="btn15" class="but" value="=" type="button" onclick="func(btn15.value)" />
+<input name="btn16" class="but" value="/" type="button" onclick="func(btn16.value)" /></td></tr>
+</td></tr>
+</table>
+</form>
+</div>
+</body>
+</html>
